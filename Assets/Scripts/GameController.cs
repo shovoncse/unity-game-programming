@@ -8,8 +8,19 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(sceneNumber);
     }
 
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        // Load the main menu scene by name
+        SceneManager.LoadScene("MainMenu");
     }
 }
